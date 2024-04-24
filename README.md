@@ -12,7 +12,7 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 - Remembers theme/font configuration
 
 ## === How to compile ===
-To compile this program I use [Nuitka](https://nuitka.net/) (Python to C compiler):
+To compile I use [Nuitka](https://nuitka.net/) (Python to C compiler):
 ```
 python -m nuitka aurora_text_editor.py
 ```
