@@ -9,6 +9,7 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 ## === Features ===
 - Themes
 - Font Styles
+- Basic text statistics
 - Remembers theme/font configuration
 
 ## === How to compile ===
