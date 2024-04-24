@@ -1,6 +1,7 @@
 
 #* Aurora Text Editor
 #? Minimalistic text editor
+#? Version: 0.7
 
 from tkinter import *
 from tkinter.messagebox import askyesno, QUESTION, showwarning
