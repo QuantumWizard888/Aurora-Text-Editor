@@ -35,7 +35,7 @@ def is_modified_text_event(Event):
 
 # <--- Window init
 prog_name = 'Aurora Text Editor'
-prog_version = ' v0.7'
+prog_version = ' v0.7.1'
 window = Tk()
 window.title(prog_name+prog_version)
 # --->
