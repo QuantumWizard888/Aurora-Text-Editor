@@ -4,7 +4,7 @@
 ## === About ===
 Minimalistic text editor created with Python and Tkinter. If you need to write simple TXT files so this is what you need. No more, no less.
 
-**Current version: 0.7**
+**Current version: 0.7.1**
 
 ## === Features ===
 - Themes
