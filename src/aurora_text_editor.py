@@ -1,7 +1,7 @@
 
 #* Aurora Text Editor
 #? Minimalistic text editor
-#? Version: 0.7
+#? Version: 0.7.1
 
 from tkinter import *
 from tkinter.messagebox import askyesno, QUESTION, showwarning
@@ -190,16 +190,23 @@ def on_menu_save_as_file():
     global is_modified
     global file_name
 
-    file_name = fd.asksaveasfilename(filetypes = (('txt', '*.txt'), ('Anything', '*.*'))) + '.txt'
+    file_name = fd.asksaveasfilename(filetypes = (('txt', '*.txt'), 
+                                                  ('conf', '*.conf'),
+                                                  ('ini', '*.ini'),
+                                                  ('json', '*.json'),
+                                                  ('xml', '*.xml'),
+                                                  ('Anything', '*.*')),
+                                    defaultextension='.txt')
+    
+    if file_name:
 
-    file = open(file_name, 'w', encoding = 'utf-8')
-    file_string = text.get(1.0, 'end-1c')
-    file.write(file_string)
-    file.close()
-    window.title(file_name+' - '+prog_name+prog_version)
-
-    is_saved = True
-    is_modified = False
+        file = open(file_name, 'w', encoding = 'utf-8')
+        file_string = text.get(1.0, 'end-1c')
+        file.write(file_string)
+        file.close()
+        window.title(file_name+' - '+prog_name+prog_version)
+        is_saved = True
+        is_modified = False
 
 
 def on_menu_save_file():
