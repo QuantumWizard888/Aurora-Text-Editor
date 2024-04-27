@@ -1,7 +1,7 @@
 
 #* Aurora Text Editor
 #? Minimalistic text editor
-#? Version: 0.8
+#? Version: 0.8.1
 
 from tkinter import *
 from tkinter.messagebox import askyesno, QUESTION, showwarning
@@ -35,7 +35,7 @@ def is_modified_text_event(Event):
 
 # <--- Window init
 prog_name = 'Aurora Text Editor'
-prog_version = ' v0.8'
+prog_version = ' v0.8.1'
 window = Tk()
 window.title(prog_name+prog_version)
 # --->
@@ -239,44 +239,14 @@ def on_menu_set_theme(theme_str: str):
         'Light': ['black', 'white', 'black'],
         'Black and White': ['white', 'black', 'white'],
         'Cyberpunk': ['#00c2a2', '#25022d', 'red'],
-        'Cybperunk Raspberry': ['#f1136e', 'black', 'red'],
+        'Cyberpunk Raspberry': ['#f1136e', 'black', 'red'],
         'Terminal': ['lime', 'black', 'lime']
     }
 
-    if theme_str == 'Light':
-
-        text.configure(foreground = theme_list['Light'][0], 
-                       background = theme_list['Light'][1], 
-                       insertbackground = theme_list['Light'][2])
-        theme_name = theme_str
-    
-    elif theme_str == 'Black and White':
-
-        text.configure(foreground = theme_list['Black and White'][0], 
-                       background = theme_list['Black and White'][1], 
-                       insertbackground = theme_list['Black and White'][2])
-        theme_name = theme_str
-    
-    elif theme_str == 'Cyberpunk':
-
-        text.configure(foreground = theme_list['Cyberpunk'][0], 
-                       background = theme_list['Cyberpunk'][1], 
-                       insertbackground = theme_list['Cyberpunk'][2])
-        theme_name = theme_str
-
-    elif theme_str == 'Cyberpunk Raspberry':
-
-        text.configure(foreground = theme_list['Cybperunk Raspberry'][0], 
-                       background = theme_list['Cybperunk Raspberry'][1], 
-                       insertbackground = theme_list['Cybperunk Raspberry'][2])
-        theme_name = theme_str
-
-    elif theme_str == 'Terminal':
-
-        text.configure(foreground = theme_list['Terminal'][0], 
-                       background = theme_list['Terminal'][1], 
-                       insertbackground = theme_list['Terminal'][2])
-        theme_name = theme_str
+    text.configure(foreground = theme_list[theme_str][0],
+                   background = theme_list[theme_str][1],
+                   insertbackground = theme_list[theme_str][2])
+    theme_name = theme_str
 
 # --->
 
@@ -401,7 +371,7 @@ def show_about_window():
     about_label.pack(side=TOP)
 
     about_info_label = Label(master=about_window, text='Minimalistic text editor.\nCreated with Python and Tkinter.\n\nThank you for using this program!', relief='solid', padx=20, pady=10)
-    about_ok_button = Button(master=about_window, text='OK', command= lambda: about_window.destroy())
+    about_ok_button = Button(master=about_window, text='OK', command = lambda: about_window.destroy())
     
     about_ok_button.pack(side=BOTTOM)
     about_info_label.pack(side=TOP)
