@@ -8,7 +8,7 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 - Themes
 - Font Styles
 - Basic text statistics
-- Remembers theme/font configuration
+- Portable
 
 ## === How to compile ===
 To compile use [Nuitka](https://nuitka.net/) (Python to C compiler):
