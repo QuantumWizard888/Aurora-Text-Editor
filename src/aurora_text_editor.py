@@ -1,7 +1,7 @@
 
 #* Aurora Text Editor
 #? Minimalistic text editor
-#? Version: 0.8.1
+#? Version: 0.8.2
 
 from tkinter import *
 from tkinter.messagebox import askyesno, QUESTION, showwarning
@@ -35,7 +35,7 @@ def is_modified_text_event(Event):
 
 # <--- Window init
 prog_name = 'Aurora Text Editor'
-prog_version = ' v0.8.1'
+prog_version = ' v0.8.2'
 window = Tk()
 window.title(prog_name+prog_version)
 # --->
@@ -273,17 +273,20 @@ def on_menu_set_font_style(style_str: str):
     global font_name
     global font_style
 
-    if style_str == 'normal':
-        text.configure(font=(font_name, font_size, 'normal'))
-        font_style = 'normal'
-    
-    elif style_str == 'bold':
-        text.configure(font=(font_name, font_size, 'bold'))
-        font_style = 'bold'
+    text.configure(font=(font_name, font_size, style_str))
+    font_style = style_str
 
-    elif style_str == 'italic':
-        text.configure(font=(font_name, font_size, 'italic'))
-        font_style = 'italic'
+    # if style_str == 'normal':
+    #     text.configure(font=(font_name, font_size, 'normal'))
+    #     font_style = 'normal'
+    
+    # elif style_str == 'bold':
+    #     text.configure(font=(font_name, font_size, 'bold'))
+    #     font_style = 'bold'
+
+    # elif style_str == 'italic':
+    #     text.configure(font=(font_name, font_size, 'italic'))
+    #     font_style = 'italic'
 
 def on_menu_reset_font_size_style():
 
