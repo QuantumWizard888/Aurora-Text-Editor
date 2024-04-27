@@ -11,11 +11,11 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 - Remembers theme/font configuration
 
 ## === How to compile ===
-To compile I use [Nuitka](https://nuitka.net/) (Python to C compiler):
+To compile use [Nuitka](https://nuitka.net/) (Python to C compiler):
 ```
 python -m nuitka aurora_text_editor.py
 ```
-And then I use [UPX](https://upx.github.io/) to decrease file size:
+And then use [UPX](https://upx.github.io/) to decrease file size:
 ```
 upx aurora_text_editor.exe
 ```
