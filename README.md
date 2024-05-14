@@ -11,7 +11,7 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 - Portable
 
 ## === How to compile ===
-To compile use [Nuitka](https://nuitka.net/) (Python to C compiler):
+To compile use [Nuitka](https://nuitka.net/) (Python code to C code converter, which then uses the default C compiler in your OS to build the program):
 ```
 python -m nuitka aurora_text_editor.py
 ```
