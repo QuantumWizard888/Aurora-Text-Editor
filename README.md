@@ -20,5 +20,15 @@ And then use [UPX](https://upx.github.io/) to decrease file size:
 upx aurora_text_editor.exe
 ```
 
+For standalone EXE and portability add change the **Nuitka Python to C compiler options** section in the source code file to this:
+```
+# <--- Nuitka Python to C compiler options
+# nuitka-project: --disable-console
+# nuitka-project: --lto=yes
+# nuitka-project: --enable-plugin=tk-inter
+# nuitka-project: --onefile
+# --->
+```
+
 ## === Why? ===
 Consider this program as a lesson for those who want to write their own text editor or other GUI program using Python and Tkinter. Enjoy!
