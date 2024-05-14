@@ -29,6 +29,7 @@ For standalone EXE and portability change the **Nuitka Python to C compiler opti
 # nuitka-project: --onefile
 # --->
 ```
+And again execute 2 previous commands.
 
 ## === Why? ===
 Consider this program as a lesson for those who want to write their own text editor or other GUI program using Python and Tkinter. Enjoy!
