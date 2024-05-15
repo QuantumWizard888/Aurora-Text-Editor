@@ -8,10 +8,6 @@ from tkinter.messagebox import askyesno, QUESTION, showwarning
 from tkinter import filedialog as fd
 import os
 
-# <--- Nuitka Python to C compiler options
-# nuitka-project: --disable-console
-# nuitka-project: --lto=yes
-# --->
 
 # <--- Global variables
 is_saved = False
