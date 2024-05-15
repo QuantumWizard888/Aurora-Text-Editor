@@ -11,25 +11,16 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 - Portable
 
 ## === How to compile ===
-To compile use [Nuitka](https://nuitka.net/) (Python code to C code converter, which then uses the default C compiler in your OS to build the program):
+To compile you need to install [Nuitka](https://nuitka.net/) (Python code to C code converter, which uses the default C compiler in your OS to build the program):
+ - For standard build run
 ```
-python -m nuitka aurora_text_editor.py
-```
-And then use [UPX](https://upx.github.io/) to decrease file size:
-```
-upx aurora_text_editor.exe
+build.bat
 ```
 
-For standalone EXE and portability change the **Nuitka Python to C compiler options** section in the source code file to this:
+ - For standalone build run:
 ```
-# <--- Nuitka Python to C compiler options
-# nuitka-project: --disable-console
-# nuitka-project: --lto=yes
-# nuitka-project: --enable-plugin=tk-inter
-# nuitka-project: --onefile
-# --->
+build_standalone.bat
 ```
-And again execute 2 previous commands.
 
 ## === Why? ===
 Consider this program as a lesson for those who want to write their own text editor or other GUI program using Python and Tkinter. Enjoy!
