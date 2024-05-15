@@ -22,5 +22,7 @@ build.bat
 build_standalone.bat
 ```
 
+> **NOTE**: Your antivirus software may trigger because of the EXE file, but don't worry, it's false positive. Just add this file as exception.
+
 ## === Why? ===
 Consider this program as a lesson for those who want to write their own text editor or other GUI program using Python and Tkinter. Enjoy!
