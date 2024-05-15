@@ -12,7 +12,7 @@ Minimalistic text editor created with Python and Tkinter. If you need to write s
 
 ## === How to compile ===
 To compile you need to install [Nuitka](https://nuitka.net/) (Python code to C code converter, which uses the default C compiler in your OS to build the program):
- - For standard build run
+ - For standard build run:
 ```
 build.bat
 ```
